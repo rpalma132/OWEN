@@ -5,22 +5,13 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OWEN.COM</title>
+    <title>OWEN.CL</title>
     <link rel="icon" type="image/jpg" href="Owen Collective/logonegro.jpg">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         
-        /* Estilo para cambiar el color del texto de la barra de navegación a negro */
-        .navbar-custom .nav-link {
-            color: black;
-            line-height: 9;
-        }
-        /* Estilos para el carrusel */
-        #carouselExampleAutoplaying img {
-            max-height: 400px; /* Altura máxima de las imágenes */
-            margin: auto; /* Centrar las imágenes horizontalmente */
-        }
         
+
 
     </style>
 </head>
@@ -28,34 +19,36 @@
 <body>
     
     <div id="logo">
-        <img src="Owen Collective/LOGO BLANCO..jpg" alt="logo" width="250px">
-    </div>
+        <a href="owen.html">
+            <img src="Owen Collective/LOGO BLANCO..jpg" alt="logo" width="250px">
+        </a>
 
     <ul class="nav justify-content-center navbar-custom"> <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">T-SHIRTS</a>
+          <a class="nav-link active" aria-current="page" href="tshirts.html">POLERAS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">HOODIES</a>
+          <a class="nav-link" href="hoodie.html">HOODIES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT US</a>
+          <a class="nav-link" href="ABOUTUS.html">SOBRE NOSOTROS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">LOGIN / REGISTRER</a>
+            <a class="nav-link" href="signup.html" target="_blank">REGISTRATE</a>
         </li>
     </ul>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Owen Collective/LOGO BLANCO..jpg" class="d-block" alt="...">
+                <img src="Owen Collective/prueba 2 assasd.jpg" class="d-block" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="Owen Collective/MOCKUP DOBLE PUBLICACION.jpg" class="d-block" alt="...">
+                <img src="Owen Collective/prueba 3.jpg"class="d-block" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="Owen Collective/MOCKUP DOBLE.jpg" class="d-block" alt="...">
+                <!-- Agrega los atributos para reproducción automática y sin sonido -->
+                <video src="Owen Collective/giratorio prueba .mp4" autoplay muted playsinline loop></video>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -67,11 +60,10 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    
 
     <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
-
-
 

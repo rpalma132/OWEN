@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#logo {
+    text-align: center;
+    margin-bottom: 20px;
+    margin: -40px;
+    line-height: -5;
+}
+
+.large-content {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.large-text {
+    display: inline-block;
+    animation: moveText 10s linear infinite;
+    transform: translateY(-100%) scale(0.1); /* Inicialmente, el texto está arriba y escala al 10% */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateY(-100%) scale(0.1); /* Al principio, el texto está arriba y escala al 10% */
+    }
+    100% {
+        transform: translateY(100%) scale(0.5); /* Al final, el texto está abajo y escala al 50% */
+    }
+}
+
+.char-1 {
+    display: inline-block;
+    font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+#desc1 {
+    background-color: white; /* Color de fondo del texto */
+    padding: 20px; /* Espaciado interno */
+    max-width: 50%; /* Ancho máximo del contenedor de texto */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(243, 243, 243, 0.1); /* Sombra */
+    text-align: justify; /* Alinear texto justificado */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    float: left; /* Hacer que el elemento flote a la izquierda */
+}
+
+#desc2 {
+    background-color: white; /* Color de fondo del texto */
+    padding: 20px; /* Espaciado interno */
+    max-width: 50%; /* Ancho máximo del contenedor de texto */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(243, 243, 243, 0.1); /* Sombra */
+    text-align: justify; /* Alinear texto justificado */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    float: right; /* Hacer que el elemento flote a la derecha */
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide la página en tres columnas */
+    grid-gap: 20px; /* Espacio entre las columnas */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana del navegador */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+#logo {
+    grid-column: 1 / 4; /* El logo ocupa las tres columnas */
+}
+
+#desc1 {
+    grid-column: 1; /* desc1 está en la primera columna */
+}
+
+#desc2 {
+    grid-column: 3; /* desc2 está en la tercera columna */
+}
+
+#desc3 {
+    grid-column: 1 / 4; /* desc3 ocupa las tres columnas */
+    align-self: end; /* Se alinea al final del contenedor */
+    text-align: center;
+}
+

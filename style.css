@@ -5,11 +5,25 @@ body{
     #logo{
         color: rgb(0, 0, 0);
         text-align: center;
-        font-family:cursive;
-        line-height: 0;
+        line-height: -20px;
         margin: -40px;
+    }
+
+    .navbar-custom .nav-link {
+        color: black;
+        line-height: 5;
+        margin: 10px;
+
+    }
+    /* Estilos para el carrusel */
+    #carouselExampleAutoplaying .carousel-item img {
+        width: 100%; /* Ancho del 100% del carrusel */
+        /* Elimina la altura máxima para que se ajuste automáticamente */
+        /* max-height: 80vh; */
+        object-fit: cover; /* Ajusta la imagen para que llene el contenedor sin deformación */
     }
 
    
     
 }
+
