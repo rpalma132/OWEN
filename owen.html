@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         
-        
-
-
     </style>
 </head>
 
@@ -34,21 +31,22 @@
           <a class="nav-link" href="ABOUTUS.html">SOBRE NOSOTROS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="signup.html" target="_blank">REGISTRATE</a>
+            <a class="nav-link" href="#" id="openModal">REGISTRATE</a>
         </li>
+
     </ul>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Owen Collective/prueba 2 assasd.jpg" class="d-block" alt="...">
+                <img src="Owen Collective/prueba 2 L.jpg" class="d-block" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="Owen Collective/prueba 3.jpg"class="d-block" alt="...">
+                <img src="Owen Collective/FINAL.jpg"class="d-block" alt="...">
             </div>
             <div class="carousel-item">
                 <!-- Agrega los atributos para reproducción automática y sin sonido -->
-                <video src="Owen Collective/giratorio prueba .mp4" autoplay muted playsinline loop></video>
+                <img src="Owen Collective/owen giratorio.gif" alt="">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -60,10 +58,39 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    
+
+    <!-- Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Aquí puedes agregar el contenido de tu formulario de registro -->
+            <p>Aquí va el formulario de registro...</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Obtén el enlace de registro
+        var registerLink = document.getElementById('openModal');
+
+        // Agrega un listener al hacer clic en el enlace de registro
+        registerLink.addEventListener('click', function(event) {
+            // Evita el comportamiento predeterminado del enlace
+            event.preventDefault();
+            // Muestra la modal de registro
+            var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+            registerModal.show();
+        });
+    </script>
 </body>
 
 </html>
+
 

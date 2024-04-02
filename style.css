@@ -13,7 +13,12 @@ body{
         color: black;
         line-height: 5;
         margin: 10px;
+          
 
+    }
+
+    .navbar-custom .nav-link:hover {
+        color: rgb(226, 224, 224); /* Cambia el color del texto en el hover */
     }
     /* Estilos para el carrusel */
     #carouselExampleAutoplaying .carousel-item img {

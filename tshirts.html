@@ -1,92 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="tshirts.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="tshirts.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OWEN.CL</title>
-    <link rel="icon" type="image/jpg" href="Owen Collective/logonegro.jpg">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        .navbar-custom .nav-link {
-            color: black;
-            line-height: 8;
-        }
+    <link rel="icon" type="image/jpg" href="Owen Collective/logonegro.jpg" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style></style>
+  </head>
+  <body>
+    <div id="logo" class="text-center">
+      <a href="owen.html">
+        <img src="Owen Collective/LOGO BLANCO..jpg" alt="logo" width="250px" />
+      </a>
+    </div>
 
-        /* Estilos personalizados para el botón BUY */
-        .btn-buy {
-            background-color: #000000; /* Café */
-            border-color: #000000; /* Café */
-            color: white; /* Letras blancas */
-        }
+    <ul class="nav justify-content-center navbar-custom">
+      <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="tshirts.html"
+          >POLERAS</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="hoodie.html">HOODIES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ABOUTUS.html">SOBRE NOSOTROS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">REGISTRATE</a>
+      </li>
+    </ul>
 
-        /* Estilos para el botón BUY cuando se pasa el mouse sobre él */
-        .btn-buy:hover {
-            background-color: #FFFFFF; /* Fondo blanco */
-            border-color: #000000; /* Café */
-            color: #000000; /* Letras café */
-        }
-    </style>
-</head>
-<body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card mb-4 mx-auto">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              <img
+                src="Owen Collective/MOCKUP DOBLE PUBLICACION.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+            </a>
 
-<div id="logo" class="text-center">
-    <a href="owen.html">
-        <img src="Owen Collective/LOGO BLANCO..jpg" alt="logo" width="250px">
-    </a>
-</div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal1"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg">
+                <!-- modal-lg para un modal grande -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel1">
+                      MARIAH
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <img
+                            src="Owen Collective/BLANCA delanteraasdasdasd.jpg"
+                            class="img-fluid"
+                            alt="Delantera"
+                          />
+                          <img
+                            src="Owen Collective/BLANCA TRASERA.jpg"
+                            class="img-fluid mt-3"
+                            alt="Trasera"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <div id="desc1">
+                            <h3>
+                              La camiseta más relajada que hemos hecho jamás.
+                              Perfecto para rockstar, boomers, activistas,
+                              durmientes, amantes del jazz, tu tío, chefs,
+                              bailarines tiktok, tu abuela...
+                            </h3>
+                            <div id="size">
+                              <ul
+                                class="SizeSwatchList HorizontalList HorizontalList--spacingTight">
+                                <li class="HorizontalList__Item">
+                                  <span class="SizeSwatch">S</span>
+                                </li>
+                                <li class="HorizontalList__Item">
+                                  <span class="SizeSwatch">M</span>
+                                </li>
+                                <li class="HorizontalList__Item">
+                                  <span class="SizeSwatch">L</span>
+                                </li>
+                                <li class="HorizontalList__Item">
+                                  <span class="SizeSwatch">XL</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary custom-add-to-cart-btn">
+                      Añadir al carro
+                    </button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
 
-<ul class="nav justify-content-center navbar-custom"> <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="tshirts.html">POLERAS</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="hoodie.html">HOODIES</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="ABOUTUS.html">SOBRE NOSOTROS</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="signup.html">REGISTRATE</a>
-  </li>
-</ul>
+            <div class="card-body text-center">
+              <h5 class="card-title">MARIAH</h5>
+              <p class="card-text">$14.990</p>
+            </div>
+          </div>
+        </div>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <div class="card mb-4 mx-auto">
-        <img src="Owen Collective/MOCKUP DOBLE PUBLICACION.jpg" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title">MARIAH</h5>
-          <p class="card-text"></p>
-          <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
+        <div class="col-md-4">
+          <div class="card mb-4 mx-auto">
+            <img
+              src="Owen Collective/MOCKUP DOBLE.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">LES YEUX</h5>
+              <p class="card-text">$14.990</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 mx-auto">
+            <img
+              src="Owen Collective/MOCKUP DOBLE VISAGE.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">VISAGE</h5>
+              <p class="card-text">$14.990</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card mb-4 mx-auto">
-        <img src="Owen Collective/MOCKUP DOBLE.jpg" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title">LES YEUX</h5>
-          <p class="card-text"></p>
-          <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card mb-4 mx-auto">
-        <img src="Owen Collective/MOCKUP DOBLE VISAGE.jpg" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title">VISAGE</h5>
-          <p class="card-text"></p>
-          <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="selectSize.js"></script>
 
-</body>
+  </body>
 </html>
-

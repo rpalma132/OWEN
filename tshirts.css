@@ -1,14 +1,80 @@
-body{
-    background-color: rgb(255, 255, 255);
+body {
+  background-color: rgb(255, 255, 255);
 
+  #logo {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 0;
+    margin: -40px;
+  }
 
-    #logo{
-        color: rgb(0, 0, 0);
-        text-align: center;
-        line-height: 0;
-        margin: -40px;
-    }
+  .navbar-custom .nav-link {
+    color: black;
+    line-height: 8;
+  }
 
-   
-    
+  .navbar-custom .nav-link:hover {
+    color: rgb(226, 224, 224); /* Cambia el color del texto en el hover */
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column; /* Apila las imágenes verticalmente */
+    align-items: center; /* Centra las imágenes horizontalmente */
+  }
+  .modal-body img {
+    max-width: 90%; /* Reducir el tamaño máximo de las imágenes */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre las imágenes */
+  }
+
+  #desc1 {
+    width: 50%; /* Ajusta el ancho del elemento al 50% del contenedor */
+    float: left; /* Hace que el elemento flote a la izquierda */
+    margin-right: 10px; /* Agrega un pequeño margen derecho para separar del resto del contenido */
+    width: 100%;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  /* Estilos para el botón de añadir al carro */
+  .custom-add-to-cart-btn {
+    background-color: rgb(0, 0, 0); /* Color de fondo inicial */
+    color: white; /* Color del texto inicial */
+    border-color: #ffffff;
+  }
+
+  .custom-add-to-cart-btn:hover,
+  .custom-add-to-cart-btn:active,
+  .custom-add-to-cart-btn:focus {
+    background-color: gray; /* Cambia a gris cuando se hace clic */
+    border-color: #fff;
+  }
+
+  .SizeSwatchList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+  }
+
+  .SizeSwatch {
+    display: inline-block;
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Ajusta el relleno */
+    margin: 5px; /* Espacio entre las tallas */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Agrega transición suave */
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .SizeSwatch:hover {
+    text-decoration: underline; /* Subraya el texto cuando se pasa el mouse sobre la talla */
+  }
+
+  .SizeSwatch.selected {
+    background-color: #7a7c7e; /* Cambia el color de fondo cuando está seleccionado */
+    color: #fff; /* Cambia el color del texto cuando está seleccionado */
+  }
 }
