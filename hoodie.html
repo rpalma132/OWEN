@@ -30,9 +30,15 @@
     <a class="nav-link" href="ABOUTUS.html">SOBRE NOSOTROS</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="signup.html">REGISTRATE</a>
+      <a class="nav-link" href="#" id="openModal">REGISTRATE</a>
+  </li>
+  <li class="nav-item ml-auto">
+    <a class="nav-link" href="#" id="openCart">
+      <img src="Owen Collective/cart.png" alt="cart" width="25px">
+    </a>
   </li>
 </ul>
+
 
 <div class="container">
     <div class="row justify-content-center">
@@ -42,13 +48,67 @@
           <div class="card-body text-center">
             <h5 class="card-title">VISAGE HOODIE</h5>
             <p class="card-text">$25.990</p>
-            <a href="#" class="btn btn-primary btn-buy">COMPRAR</a>
           </div>
         </div>
       </div>
       
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Aquí puedes agregar el contenido de tu formulario de registro -->
+          <p>Aquí va el formulario de registro...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasCartLabel">Tu Carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Contenido del carrito aquí -->
+      <p>Aquí va el contenido del carrito...</p>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+      // Obtén el enlace de registro
+      var registerLink = document.getElementById('openModal');
+
+      // Agrega un listener al hacer clic en el enlace de registro
+      registerLink.addEventListener('click', function(event) {
+          // Evita el comportamiento predeterminado del enlace
+          event.preventDefault();
+          // Muestra la modal de registro
+          var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+          registerModal.show();
+      });
+
+      // Obtén el enlace del carrito
+      var cartLink = document.getElementById('openCart');
+
+      // Agrega un listener al hacer clic en el enlace del carrito
+      cartLink.addEventListener('click', function(event) {
+          // Evita el comportamiento predeterminado del enlace
+          event.preventDefault();
+          // Muestra el offcanvas del carrito
+          var cartOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasCart'));
+          cartOffcanvas.show();
+      });
+  </script>
   
   </body>
   </html>

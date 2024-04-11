@@ -12,7 +12,8 @@ body{
 
     .navbar-custom .nav-link {
         color: black;
-        line-height: 8;
+        line-height: 5;
+        margin: 10px;
     }
     
     .navbar-custom .nav-link:hover {

@@ -10,8 +10,9 @@ body {
 
   .navbar-custom .nav-link {
     color: black;
-    line-height: 8;
-  }
+    line-height: 5;
+    margin: 10px;
+}
 
   .navbar-custom .nav-link:hover {
     color: rgb(226, 224, 224); /* Cambia el color del texto en el hover */
@@ -56,13 +57,14 @@ body {
     justify-content: center;
     list-style: none; /* Elimina los puntos de lista */
     padding: 0;
+    margin: 33px;
   }
 
   .SizeSwatch {
     display: inline-block;
     border: none; /* Elimina el borde */
     padding: 10px 20px; /* Ajusta el relleno */
-    margin: 5px; /* Espacio entre las tallas */
+    margin:10px; /* Espacio entre las tallas */
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease; /* Agrega transición suave */
