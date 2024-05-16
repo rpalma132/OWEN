@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="hoodie.css">
+  <link rel="stylesheet" href="Styles/hoodie.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OWEN.CL</title>
@@ -57,19 +57,88 @@
 
   <!-- Modal -->
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="registerModalLabel">Registro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="validationCustom02" value="" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label">Correo</label>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">Por favor ingrese un correo.</div>
+                    </div>
+
+
+                    <div class="row g-3 align-items-center">
+                      <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Contraseña</label>
+                      </div>
+                      <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                      </div>
+                      <div class="col-auto">
+                        <span id="passwordHelpInline" class="form-text">
+                          La contraseña debe tener entre 8 y 20 caracteres.
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="region">Región:</label>
+                                    <select id="region" name="Region" class="form-control" required onchange="obtenerComunas()">
+                                        <option value="">Seleccione una Región</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="comuna">Comuna:</label>
+                                    <select id="comuna" name="comuna" class="form-control" required>
+                                        <option value="">Seleccione una Comuna</option>
+                                    </select>
+                                    <span id="comuna-error" class="error-message"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom05" class="form-label">Codigo Postal</label>
+                        <input type="text" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">Por favor agrege un codigo postal VALIDO.</div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">Acepto los terminos y condiciones.</label>
+                            <div class="invalid-feedback">You must agree before submitting.</div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between">
+                      <button class="btn btn-dark" type="submit">Registrarse</button>
+                      <button class="btn btn-dark" type="submit">Iniciar sesión</button>
+                  </div>                  
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-          <!-- Aquí puedes agregar el contenido de tu formulario de registro -->
-          <p>Aquí va el formulario de registro...</p>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
   <!-- Offcanvas -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
@@ -84,31 +153,7 @@
   </div>
 
   <script src="js/bootstrap.min.js"></script>
-  <script>
-      // Obtén el enlace de registro
-      var registerLink = document.getElementById('openModal');
-
-      // Agrega un listener al hacer clic en el enlace de registro
-      registerLink.addEventListener('click', function(event) {
-          // Evita el comportamiento predeterminado del enlace
-          event.preventDefault();
-          // Muestra la modal de registro
-          var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
-          registerModal.show();
-      });
-
-      // Obtén el enlace del carrito
-      var cartLink = document.getElementById('openCart');
-
-      // Agrega un listener al hacer clic en el enlace del carrito
-      cartLink.addEventListener('click', function(event) {
-          // Evita el comportamiento predeterminado del enlace
-          event.preventDefault();
-          // Muestra el offcanvas del carrito
-          var cartOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasCart'));
-          cartOffcanvas.show();
-      });
-  </script>
+<script src="JavaScript/perfil.js"></script>
   
   </body>
   </html>

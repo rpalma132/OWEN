@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OWEN.CL</title>
@@ -20,7 +20,7 @@
         </a>
     </div>
 
-    <ul class="nav justify-content-center navbar-custom"> <!-- Añade la clase navbar-custom para aplicar estilos personalizados -->
+    <ul class="nav justify-content-center navbar-custom">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="tshirts.html">POLERAS</a>
         </li>
@@ -49,7 +49,6 @@
                 <img src="Owen Collective/FINAL.jpg" class="d-block" alt="...">
             </div>
             <div class="carousel-item">
-                <!-- Agrega los atributos para reproducción automática y sin sonido -->
                 <img src="Owen Collective/owen giratorio.gif" alt="">
             </div>
         </div>
@@ -64,79 +63,159 @@
     </div>
 
     <footer class="footer">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <ul class="social-icons">
-                      <li><a href="https://www.instagram.com/renaatoignaciio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                      <li><a href="https://www.tiktok.com/@tucuenta" target="_blank"><i class="fab fa-tiktok"></i></a></li>
-                  </ul>
-                  <p>Síguenos en Instagram y TikTok</p>
-                  <p>Teléfono: +56998236541</p>
-              </div>
-          </div>
-      </div>
-  </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="social-icons">
+                        <li><a href="https://www.instagram.com/renaatoignaciio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@tucuenta" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    </ul>
+                    <p>Síguenos en Instagram y TikTok</p>
+                    <p>Teléfono: +56998236541</p>
+                </div>
+            </div>
+        </div>
+    </footer>
   
-
     <!-- Modal -->
     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="registerModalLabel">Registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Aquí puedes agregar el contenido de tu formulario de registro -->
-            <p>Aquí va el formulario de registro...</p>
-          </div>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="validationCustomUsername" class="form-label">Correo</label>
+                          <div class="input-group">
+                              <input type="text" class="form-control" id="validationCustomUsername" placeholder="@gmail.com o @hotmail.com" aria-describedby="correoHelp" required>
+                          </div>
+                          <div id="correoHelp" class="form-text">Ingrese un correo válido.</div>
+                      </div>                      
+                        <div class="row g-3 align-items-center">
+                          <div class="col-auto">
+                            <label for="inputPassword6" class="col-form-label">Contraseña</label>
+                          </div>
+                          <div class="col-auto">
+                            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                          </div>
+                          <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                              La contraseña debe tener entre 8 y 20 caracteres.
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="region">Región:</label>
+                                        <select id="region" name="Region" class="form-control" required onchange="obtenerComunas()">
+                                            <option value="">Seleccione una Región</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="comuna">Comuna:</label>
+                                        <select id="comuna" name="comuna" class="form-control" required>
+                                            <option value="">Seleccione una Comuna</option>
+                                        </select>
+                                        <span id="comuna-error" class="error-message"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <label for="validationCustom05" class="form-label">Codigo Postal</label>
+                          <input type="text" class="form-control" id="validationCustom05" required>
+                          <div id="codigoPostalError" class="error-message"></div>
+                      </div>                      
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">Acepto los terminos y condiciones.</label>
+                                <div class="invalid-feedback">You must agree before submitting.</div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-between">
+                            <button class="btn btn-dark" type="submit">Registrarse</button>
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Iniciar sesion
+                              </button>
+                        </div>                        
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <!--- modal-->
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar sesión</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="validationCustomUsername" class="form-label">Correo</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="@gmail.com o @hotmail.com" aria-describedby="correoHelp" required>
+                    </div>
+                    <div id="correoHelp" class="form-text">Ingrese un correo válido.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword6" class="form-label">Contraseña</label>
+                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <div id="passwordHelpInline" class="form-text">
+                        La contraseña debe tener entre 8 y 20 caracteres.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark">Iniciar sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasCartLabel">Tu Carrito</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- Contenido del carrito aquí -->
-        <p>Aquí va el contenido del carrito...</p>
-      </div>
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel">Tu Carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Contenido del carrito aquí -->
+            <p>Aquí va el contenido del carrito...</p>
+        </div>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        // Obtén el enlace de registro
-        var registerLink = document.getElementById('openModal');
-
-        // Agrega un listener al hacer clic en el enlace de registro
-        registerLink.addEventListener('click', function(event) {
-            // Evita el comportamiento predeterminado del enlace
-            event.preventDefault();
-            // Muestra la modal de registro
-            var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
-            registerModal.show();
-        });
-
-        // Obtén el enlace del carrito
-        var cartLink = document.getElementById('openCart');
-
-        // Agrega un listener al hacer clic en el enlace del carrito
-        cartLink.addEventListener('click', function(event) {
-            // Evita el comportamiento predeterminado del enlace
-            event.preventDefault();
-            // Muestra el offcanvas del carrito
-            var cartOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasCart'));
-            cartOffcanvas.show();
-        });
-    </script>
+    <script src="JavaScript/perfil.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </body>
 
 </html>
-
-
